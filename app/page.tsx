@@ -1,5 +1,5 @@
-import { SeamlessTransfers } from "../prompting"
+import { TelihaLanding } from "../components/teliha-landing"
 
 export default function Home() {
-  return <SeamlessTransfers />
+  return <TelihaLanding />
 }
