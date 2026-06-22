@@ -32,7 +32,9 @@ export function LegalPage({ num, kicker, title, lead, children }: LegalPageProps
           <a href="/" className="brand">
             <Cannabis className="leaf" stroke="url(#teliha-rgb3)" />
             <span>
-              Te<b>Li</b>Ha
+              <span className="w-te">Te</span>
+              <span className="w-li">li</span>
+              <span className="w-ha">Ha</span>
             </span>
           </a>
           <a href="/" className="legal-back">← ホーム</a>
