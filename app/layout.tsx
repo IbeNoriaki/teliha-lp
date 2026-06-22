@@ -6,9 +6,6 @@ import { LanguageProvider } from "../hooks/use-language"
 export const metadata: Metadata = {
   title: "Teliha — Turn intent into living systems",
   description: "Living software, built entirely in-house — to see the future first.",
-  icons: {
-    icon: "/icon.png",
-  },
 }
 
 export default function RootLayout({

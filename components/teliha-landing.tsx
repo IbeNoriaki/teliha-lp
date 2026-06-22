@@ -8,10 +8,6 @@ type Dict = Record<string, { en: string; ja: string }>
 
 const DICT: Dict = {
   "hero.kicker": { en: "Teliha Limited", ja: "株式会社Teliha" },
-  "hero.sub": {
-    en: "Living software, built entirely in-house — to see the future first.",
-    ja: "すべて自前の、動くソフトウェア。動かして、未来を先に見る。",
-  },
   "sec.about": { en: "About Us", ja: "会社について" },
   "about.k.who": { en: "WHO", ja: "誰が" },
   "about.k.whom": { en: "WHOM", ja: "誰に" },
@@ -141,14 +137,17 @@ export function TelihaLanding() {
   const lang: "en" | "ja" = language === "jp" ? "ja" : "en"
   const t = (key: string) => DICT[key]?.[lang] ?? key
 
-  const heroH1 =
+  const heroTagline =
     lang === "ja" ? (
       <>
-        意図を、<em>生きたシステム</em>へ。
+        <span className="nb">
+          <em>未来</em>を、
+        </span>
+        <span className="nb">先に見る。</span>
       </>
     ) : (
       <>
-        Turn intent into <em>living systems.</em>
+        See the <em>future</em> first.
       </>
     )
 
@@ -198,15 +197,8 @@ export function TelihaLanding() {
             <div className="card-k">
               <span className="n">◆</span> <span>{t("hero.kicker")}</span>
             </div>
-            <div style={{ marginTop: "auto" }}>
-              <h1>{heroH1}</h1>
-              <p className="hero-sub">{t("hero.sub")}</p>
-              <div className="hero-tags">
-                <span>Software</span>
-                <span>Finance</span>
-                <span>Onchain</span>
-                <span>Vision</span>
-              </div>
+            <div className="hero-center">
+              <h1>{heroTagline}</h1>
             </div>
           </section>
 
