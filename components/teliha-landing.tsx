@@ -257,13 +257,15 @@ export function TelihaLanding() {
                   <div className="member" key={m.name}>
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img className="avatar" src={m.img} alt={m.name} />
-                    <div className="member-name">{m.name}</div>
-                    <div className="member-role">{t(m.role)}</div>
-                    <p className="member-bio">{t(m.bio)}</p>
-                    <a className="member-x" href={m.x} target="_blank" rel="noopener">
-                      <XIcon />
-                      {m.handle}
-                    </a>
+                    <div className="member-info">
+                      <div className="member-name">{m.name}</div>
+                      <div className="member-role">{t(m.role)}</div>
+                      <p className="member-bio">{t(m.bio)}</p>
+                      <a className="member-x" href={m.x} target="_blank" rel="noopener">
+                        <XIcon />
+                        {m.handle}
+                      </a>
+                    </div>
                   </div>
                 ))}
               </div>
